@@ -47,6 +47,24 @@ const content = `
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Agrandir-GrandHeavy';
+    src: url('${basePath}/fonts/Agrandir-GrandHeavy.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agrandir-Regular';
+    src: url('${basePath}/fonts/Agrandir-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 `;
 
 fs.writeFile("public/fonts/fonts.css", content, (err) => {

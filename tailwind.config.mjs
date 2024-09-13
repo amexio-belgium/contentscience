@@ -4,6 +4,9 @@ const plugin = require('tailwindcss/plugin')
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		backgroundImage: theme => ({
+			'blue-gradient': `linear-gradient(to bottom right, ${theme('colors.blue.20')}, ${theme('colors.blue.800')})`,
+		  }),
 		fontSize: {
 			'xxs': ['0.875rem', '1.5'],
 			'xs': ['1rem', '1.5'],
@@ -13,11 +16,11 @@ export default {
 			'xl': ['1.75rem', '1.3'],
 			'2xl': ['2rem', '1.3'],
 			'3xl': ['2.75rem', '1.3'],
-			'4xl': ['4.75rem', '1.3'],
+			'4xl': ['4.4rem', '1.3'],
 		},
 		fontFamily: {
-			sans: ['Lexend', 'sans-serif'],
-			serif: ['Contane', 'serif']
+			sans: ['Agrandir-Regular', 'sans-serif'],
+			serif: ['Agrandir-GrandHeavy', 'serif']
 		},
 		colors: {
 			'transparent': 'transparent',
@@ -30,6 +33,7 @@ export default {
 			'black': "#0B1215",
 			'blue': {
 				DEFAULT: '#084772',
+				20: '#084772',
 				50: '#e6edf1',
 				100: '#b2c6d3',
 				200: '#8daabe',
@@ -38,7 +42,7 @@ export default {
 				500: '#084772',
 				600: '#074168',
 				700: '#063251',
-				800: '#04273f',
+				800: '#3881A5',
 				900: '#031e30',
 			},
 			'orange': {
