@@ -21,7 +21,7 @@ let parts = [
     text: t('breadcrumb.home'),
     href: `/${lang}/` 
   }
-];
+]; 
 
 paths.forEach((text, i) => {
   const href = `/${paths.slice(0, i + 1).join('/')}`;
@@ -39,7 +39,7 @@ paths.forEach((text, i) => {
                 <li class="text-regular flex items-center gap-2" role="listitem"> 
 
                     { index !== parts.length - 1 ? 
-                      <a href={parseHref(href)} {...attrs} aria-current={(href === pathnameFormatted) && "page"}
+                      <a class="text-white" href={parseHref(href)} {...attrs} aria-current={(href === pathnameFormatted) && "page"}
                         class="underline decoration-1 underline-offset-2 decoration-white hover:decoration-tertiary text-xs capitalize outline-none md:py-2 bg-clip-text duration-300 bg-[length:200%_100%] bg-[100%] hover:bg-[0%_100%] transition-all motion-reduce:transition-none bg-gradient-to-r from-tertiary from-0% via-tertiary via-50% to-white to-50% text-transparent focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-2 focus-visible:outline-yellow-500">
                         {text}
                       </a> 
