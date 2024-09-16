@@ -27,8 +27,8 @@ import Customers from "@components/uicomposition/Customers.astro"
 import speaker1 from '@assets/images/peter-hinssen1.png';
 import speaker2 from '@assets/images/tom-laureys.png';
 import speaker3 from '@assets/images/tbd.png';
-import eventlocation from '@assets/images/ohl.jpg';
-import conferencecenter from '@assets/images/content-science-conference.jpg';
+import eventlocation from '@assets/images/ohl.png';
+import conferencecenter from '@assets/images/content-science-conference.png';
 
 export function getStaticPaths() {
 	return i18nParams;
@@ -47,7 +47,7 @@ const t = useTranslations(lang, 'home');
 	<TeaserWithImage 
 		headline="Join us at Content Science Conference <span class='text-orange'>24</span>"
 		description="Be part of <strong>Belgium's first event focused on how AI will transform Content Management</strong>. At the Content Science Conference 2024, you'll connect with CIOs, IT Managers, Marketing Directors, and leaders using generative AI to drive business value.<br/><br/>Network with decision-makers, learn from industry experts like <strong>Peter Hinssen</strong> and <strong>Tom Laureys</strong>, and discover the latest tools and strategies shaping the future of content. Whether you’re interested in gaining new insights or exploring the latest advancements, this conference offers a chance to engage with the evolving landscape of content and AI.">
-		<Image src={eventlocation} alt="OHL Stadium Leuven"  width={1000} class="rounded-xl" />
+		<Image src={eventlocation} alt="OHL Stadium Leuven" style="margin-top:30px;"  width={800} class="" />
     <br/><h2 style="font-weight:bold;" class="uppercase text-lg text-blue">Time &amp; Place</h2>
     <span style="font-size:140%">28 NOV 2024 - 13:00-18:00</span><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6"><strong>OHL LEUVEN STADIUM, The King Power At Den Dreef Stadium</strong></a><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6">Kardinaal Mercierlaan 46, 3001 Leuven</a>
 	</TeaserWithImage>
@@ -59,17 +59,17 @@ const t = useTranslations(lang, 'home');
     <SmallTile 
       headline="Peter Hinssen (Nexxworks)"
       description="Renowned technology thought leader, author, and entrepreneur." >
-      <Image src={speaker1} alt="" width={512} height={512} class="rounded-xl" />
+      <Image src={speaker1} alt="" width={512} height={512} class="" />
     </SmallTile>
     <SmallTile 
       headline="Tom Laureys (AmeXio)"
       description="Expert in digital transformation and content management strategies" >
-      <Image src={speaker2} alt="" width={512} height={512} class="rounded-xl" />
+      <Image src={speaker2} alt="" width={512} height={512} class="" />
     </SmallTile>
     <SmallTile 
       headline="Speaker TBD" 
       description="Details coming soon. Stay tuned for exciting announcements!" >
-      <Image src={speaker3} alt="" width={512} height={512} class="rounded-xl" />
+      <Image src={speaker3} alt="" width={512} height={512} class="" />
     </SmallTile>
     <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
       <Image loading="lazy" src={slant} alt="" />
@@ -88,7 +88,7 @@ const t = useTranslations(lang, 'home');
 		headline="Conference Agenda"
 		description="<table><tr><td>13:00 - 13:45</td><td>Welcome + Stadium Tour</td></tr><tr><td>13:45 - 14:15</td><td>Keynote by Peter Hinssen (Nexxworks)</td></tr><tr><td>14:15 - 14:30</td><td>Setting the Scene by AmeXio</td></tr><tr><td>14:30 - 14:45</td><td>Pause</td></tr><tr><td>14:45 - 15:45</td><td>Breakout Sessions 1 - Content Science</td></tr><tr><td>15:45 - 16:00</td><td>Pause</td></tr><tr><td>16:00 - 17:00</td><td>Breakout Sessions 2 - Content Science</td></tr><tr><td>17:00 - 18:00</td><td>Networking + Demo-area + Food</td></tr></table>">
 		
-    <Image src={conferencecenter} alt="Content Science Conference 24 announcement - 24 november 2024" style="margin-top:30px;" height={512}  class="rounded-xl" />
+    <Image src={conferencecenter} alt="Content Science Conference 24 announcement - 24 november 2024" style="margin-top:30px;" height={512}  class="" />
     
 	</TeaserWithImage>
   
