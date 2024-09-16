@@ -10,13 +10,7 @@ const hbsptContactForm = {
         document.head.appendChild(script);
     },
     initForm: function (lang) {
-        let formId = "0bbb8a62-0b4c-42f5-820a-f7efe483b6e7";
-        lang == "fr" &&
-            (formId =
-                "e0b390be-6491-40c2-9045-33ef9ed28f96");
-        lang == "nl" &&
-            (formId =
-                "71312006-dc15-4ec1-9b49-64c2babbd2f7");
+        let formId = "1ca9d580-048a-40d8-9b2f-7f1ccded1d6f";
 
         // @ts-ignore
         if (hbspt) {
