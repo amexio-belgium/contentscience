@@ -37,7 +37,7 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const t = useTranslations(lang, 'home');
 ---
-<Base title="Content Science Conference 2024" description={t('home.seoDescription')}>
+<Base title="Content Science Conference 24 - Belgium’s first event dedicated to the revolutionary impact of AI on Content Management" description={t('home.seoDescription')}>
   <HeroHeader 
       headline="CONTENT SCIENCE <span style='color:#D9E8F5;'>CONFERENCE</span> <span style='color:#F8803D;'>24</span>"
       text="The Next Wave of Enterprise Innovation: Where <strong>Content Management</strong> Meets <strong>AI</strong>. <br/>Discover how AI can enhance your content platforms and streamline processes!"
@@ -88,9 +88,7 @@ const t = useTranslations(lang, 'home');
     <Image src={conferencecenter} alt="Content Science Conference 24 announcement - 24 november 2024" height={512}  class="" />  
   </TeaserWithImage>
   
-  
- 
-<!--   <InsightsTeaser />-->
+  <!--   <InsightsTeaser />-->
 
 </Base>
 
