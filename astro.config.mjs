@@ -23,6 +23,11 @@ export default defineConfig({
       nesting: true,
     }),
   ],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+    prefixDefaultLocale: false,
+  },
   base: basePath,
   vite: {
     build: {

@@ -7,10 +7,8 @@ import Button from '@components/uielements/Button.astro';
 export function getStaticPaths() {
 	return i18nParams;
 }
-import { getLangFromUrl } from '../i18n/utils';
-const lang = getLangFromUrl(Astro.url);
 
-const t = useTranslations(lang);
+const t = useTranslations('en');
 ---
 <Base title={t('404.title')}>
     <section class="">
@@ -23,7 +21,7 @@ const t = useTranslations(lang);
                 <p class="mb-4 text-lg font-light text-white">
                     {t('404.text')}
                 </p>
-                <Button class="inline-block mt-4" link="/" style="primary" color="dark">{t('404.button')}</Button>
+                <Button class="inline-block mt-4" link="" style="primary" color="dark">{t('404.button')}</Button>
             </div>   
         </div>
     </section>
