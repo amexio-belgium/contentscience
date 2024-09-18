@@ -16,6 +16,7 @@ const basePath =
 export default defineConfig({
   site: ASTRO_SITE_URL,
   outDir: `./dist${PUBLIC_ASTRO_BASE_PATH}`,
+  output: "static",
   integrations: [
     mdx(),
     sitemap(),
