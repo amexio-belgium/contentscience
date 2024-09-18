@@ -1,8 +1,4 @@
 ---
-import { getLangFromUrl } from '../../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
-
 interface Props {
   size?: "sm" | "md" | "lg";
   icon?:  "phone" | "info" | "email" | "world" | "none";
@@ -78,7 +74,7 @@ const TagName = decorative ? "span" : "a";
     styles[style + "_" + color],
     className,
   ]}
-  href={`${import.meta.env.PUBLIC_ASTRO_BASE_PATH}/${lang+link}`}
+  href={`${import.meta.env.PUBLIC_ASTRO_BASE_PATH}/${link}`}
   >
   { icon !== "none" && 
     <svg class:list={[iconFill[style + "_" + color], 
@@ -95,7 +91,7 @@ const TagName = decorative ? "span" : "a";
   {
     style == "tertiary" &&
       <svg class="will-change-transform	group-hover/icon:animate-jump motion-reduce:group-hover/icon:animate-none animate-ease-out w-6 h-6 fill-current" aria-hidden="true" focusable="false">
-        <use xlink:href=`${import.meta.env.PUBLIC_ASTRO_BASE_PATH}/icons/icon-sprite.svg#icon-chevron-right`></use>
+        <use xlink:href={`${import.meta.env.PUBLIC_ASTRO_BASE_PATH}/icons/icon-sprite.svg#icon-chevron-right`}></use>
       </svg>
   }
 </TagName>
