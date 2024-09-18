@@ -16,6 +16,7 @@ const basePath =
 export default defineConfig({
   site: ASTRO_SITE_URL,
   outDir: `./dist${PUBLIC_ASTRO_BASE_PATH}`,
+  output: "static",
   integrations: [
     mdx(),
     sitemap(),
@@ -23,6 +24,11 @@ export default defineConfig({
       nesting: true,
     }),
   ],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+    prefixDefaultLocale: false,
+  },
   base: basePath,
   vite: {
     build: {

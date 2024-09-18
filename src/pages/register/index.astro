@@ -1,17 +1,12 @@
 ---
-import { i18nParams } from "../../../i18n/consts";
 import { useTranslations } from "src/i18n/utils";
 import Base from "@layouts/Base.astro";
 import HeroHeader from "@components/uicomposition/HeroHeader.astro";
-import Highlight from "@components/uicomposition/Highlight.astro";
 import ContactForm from "@components/uielements/contactForm.astro";
 
-export function getStaticPaths() {
-	return i18nParams;
-}
 
-const { lang } = Astro.params;
-const t = useTranslations(lang, "contact");
+
+const t = useTranslations('en', "contact");
 ---
 
 <Base

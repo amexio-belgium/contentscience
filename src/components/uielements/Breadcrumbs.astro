@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { useTranslations } from '../../i18n/utils';
 import { parseHref } from "src/helpers";
 
 const { pathname } = Astro.url;
@@ -13,13 +13,12 @@ if(basePath && basePath !== '' && basePath !== '/'){
 }
 
 const paths = pathnameFormatted.split('/').filter(x => x);
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const t = useTranslations('en');
 
 let parts = [
   {
     text: t('breadcrumb.home'),
-    href: `/${lang}/` 
+    href: `/` 
   }
 ]; 
 
