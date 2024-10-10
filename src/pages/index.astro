@@ -9,6 +9,7 @@ import slant from "@assets/images/slantwithimage.png"
 import Image from 'astro/components/Image.astro';
 import TeaserWithImage  from "@components/uicomposition/TeaserWithImage.astro";
 import avepoint from '@assets/logos/avepoint-logo.png';
+import ser from '@assets/logos/SER-logo.png';
 import Customers from "@components/uicomposition/Customers.astro"
 import speaker1 from '@assets/images/peter-hinssen-speaker.png';
 import speaker2 from '@assets/images/tom-laureys.png';
@@ -92,6 +93,7 @@ const t = useTranslations('en', 'home');
 
   <Customers headline="Our Partners and GOLD Sponsors">
     <a href="https://www.avepoint.com/" target="_blank"><Image src={avepoint} alt="AvePoint Gold Partner Content Science Conference 24" class="h-12 w-auto"/></a>
+    <a href="https://www.sergroup.com/" target="_blank"><Image src={ser} alt="SER Gold Partner Content Science Conference 24" style="margin-left:50px;" class="h-14 m w-auto"/></a>
   </Customers>   
 
 	<TeaserWithImage  
