@@ -10,10 +10,10 @@ import Image from 'astro/components/Image.astro';
 import TeaserWithImage  from "@components/uicomposition/TeaserWithImage.astro";
 import avepoint from '@assets/logos/avepoint-logo.png';
 import ser from '@assets/logos/SER-logo.png';
+import sanity from '@assets/logos/sanityio-logo.png';
 import Customers from "@components/uicomposition/Customers.astro"
 import speaker1 from '@assets/images/peter-hinssen-speaker.png';
 import speaker2 from '@assets/images/tom-laureys.png';
-import speaker3 from '@assets/images/tbd.png';
 import speaker4 from '@assets/images/karsten-gielis.png';
 import speaker5 from '@assets/images/jerome-fortias1.png';
 import speaker6 from '@assets/images/jan-lemmens.png';
@@ -75,10 +75,6 @@ const t = useTranslations('en', 'home');
       <Image src={speaker5} alt="Jérôme Fortias" width={512} height={512} class="" />
     </SmallTile>
 
- 
-
-  
-    
     <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
       <Image loading="lazy" src={slant} alt="" />
     </div>
@@ -86,9 +82,11 @@ const t = useTranslations('en', 'home');
   </TilesContainer>
   
 
-  <Customers headline="Our Partners and GOLD Sponsors">
+  <Customers headline="Our Content Science Partners and GOLD Sponsors">
     <a href="https://www.avepoint.com/" target="_blank"><Image src={avepoint} alt="AvePoint Gold Partner Content Science Conference 24" style="margin-top:10px;" class="h-8 w-auto"/></a>
     <a href="https://www.sergroup.com/" target="_blank"><Image src={ser} alt="SER Gold Partner Content Science Conference 24" style="margin-left:50px;" class="h-14 m w-auto"/></a>
+    <a href="https://www.sanity.io/" target="_blank"><Image src={sanity} alt="Sanity CMS Gold Partner Content Science Conference 24" style="margin-top:2px; margin-left:50px;" class="h-14 w-auto"/></a>
+ 
   </Customers>   
 
 	<TeaserWithImage  
