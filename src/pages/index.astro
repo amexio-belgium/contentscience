@@ -11,6 +11,8 @@ import TeaserWithImage  from "@components/uicomposition/TeaserWithImage.astro";
 import avepoint from '@assets/logos/avepoint-logo.png';
 import ser from '@assets/logos/SER-logo.png';
 import sanity from '@assets/logos/sanityio-logo.png';
+import algolia from '@assets/logos/algolia-logo.png';
+import powell from '@assets/logos/powell-logo.png';
 import Customers from "@components/uicomposition/Customers.astro"
 import speaker1 from '@assets/images/peter-hinssen-speaker.png';
 import speaker2 from '@assets/images/tom-laureys.png';
@@ -18,9 +20,7 @@ import speaker4 from '@assets/images/karsten-gielis.png';
 import speaker5 from '@assets/images/jerome-fortias1.png';
 import speaker6 from '@assets/images/jan-lemmens.png';
 import eventlocation from '@assets/images/ohl.png';
-
 import conferencecenter from '@assets/images/content-science-conference.png';
-
 
 const t = useTranslations('en', 'home');
 ---
@@ -42,7 +42,7 @@ const t = useTranslations('en', 'home');
   <TilesContainer class="mb-0 pb-0"
     headline="Meet Our Keynote Speakers"
     description="Our speakers are at the forefront of innovation, bringing unparalleled insights and expertise." >
-  
+    
     <SmallTile 
       headline="Peter Hinssen (Nexxworks)"
       description="Renowned technology thought leader, author, and entrepreneur." >
@@ -60,8 +60,8 @@ const t = useTranslations('en', 'home');
       description="Expert in digital transformation and content management strategies" >
       <Image src={speaker2} alt="Tom Laureys" width={512} height={512} class="" />
     </SmallTile>
-  
   </TilesContainer>
+
   <TilesContainer headline="" description="" orangeSlant={true} class="mt-0 pt-0">
     <SmallTile 
       headline="Jan Lemmens (AmeXio)" 
@@ -78,18 +78,21 @@ const t = useTranslations('en', 'home');
     <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
       <Image loading="lazy" src={slant} alt="" />
     </div>
-    
   </TilesContainer>
-  
 
-  <Customers headline="Our Content Science Partners and GOLD Sponsors">
+  <Customers headline="Gold Sponsors">
     <a href="https://www.avepoint.com/" target="_blank"><Image src={avepoint} alt="AvePoint Gold Partner Content Science Conference 24" style="margin-top:10px;" class="h-10 w-auto"/></a>
     <a href="https://www.sergroup.com/" target="_blank"><Image src={ser} alt="SER Gold Partner Content Science Conference 24" style="margin-left:50px;" class="h-14 m w-auto"/></a>
     <a href="https://www.sanity.io/" target="_blank"><Image src={sanity} alt="Sanity CMS Gold Partner Content Science Conference 24" style="margin-top:2px; margin-left:50px;" class="h-14 w-auto"/></a>
+    <a href="https://powell-software.com" target="_blank"><Image src={powell} alt="Powel Software Gold Partner Content Science Conference 24" style="margin-top:2px; margin-left:50px;" class="h-14 w-auto"/></a>
  
   </Customers>   
 
-	<TeaserWithImage  
+  <Customers headline="Silver Sponsors">
+    <a href="https://www.algolia.com/" target="_blank"><Image src={algolia} alt="Algolia" style="margin-top:2px;" class="h-8 w-auto"/></a>
+  </Customers>   
+
+	<TeaserWithImage 
 		headline="Conference Agenda"
     ctaText="Grab Your Free Spot" 
 		description="<table><tr><td>13:00 - 13:30</td><td>Welcome + Stadium Tour</td></tr><tr><td>13:30 - 13:45</td><td>Setting the Scene by AmeXio</td></tr><tr><td>13:45 - 14:15</td><td>Keynote by Peter Hinssen (Nexxworks)</td></tr><tr><td>14:30 - 14:45</td><td>Pause</td></tr><tr><td>14:45 - 15:45</td><td>Breakout Sessions 1 - Content Science</td></tr><tr><td>15:45 - 16:00</td><td>Pause</td></tr><tr><td>16:00 - 17:00</td><td>Breakout Sessions 2 - Content Science</td></tr><tr><td>17:00 - 18:00</td><td>Networking + Demo-area + Food</td></tr></table>">
@@ -97,9 +100,6 @@ const t = useTranslations('en', 'home');
     <Image src={conferencecenter} alt="Content Science Conference 24 announcement - 24 november 2024" height={512}  class="" />  
   </TeaserWithImage>
   
-  
- 
-<!--   <InsightsTeaser />-->
-
+  <!--<InsightsTeaser />-->
 </Base>
 
