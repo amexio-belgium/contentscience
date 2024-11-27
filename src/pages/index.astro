@@ -39,7 +39,7 @@ const t = useTranslations('en', 'home');
     <span style="font-size:140%">28 NOV 2024 - 13:00-18:00</span><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6"><strong>OHL LEUVEN STADIUM, The King Power At Den Dreef Stadium</strong></a><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6">Kardinaal Mercierlaan 46, 3001 Leuven</a>
 	</TeaserWithImage>
 	
-  <TilesContainer class="mb-0 pb-0"
+  <TilesContainer class="mb-0 pb-0" orangeSlant={true}
     headline="Meet Our Keynote Speakers"
     description="Our speakers are at the forefront of innovation, bringing unparalleled insights and expertise." >
     
@@ -55,29 +55,32 @@ const t = useTranslations('en', 'home');
       <Image src={speaker4} alt="Karsten Gielis" width={512} height={512} class="" />
     </SmallTile>
 
-    <SmallTile 
-      headline="Tom Laureys (AmeXio)"
-      description="Expert in digital transformation and content management strategies" >
-      <Image src={speaker2} alt="Tom Laureys" width={512} height={512} class="" />
-    </SmallTile>
+    
+
+    <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
+      <Image loading="lazy" src={slant} alt="" />
+    </div>
   </TilesContainer>
 
   <TilesContainer headline="" description="" orangeSlant={true} class="mt-0 pt-0">
     <SmallTile 
-      headline="Jan Lemmens (AmeXio)" 
-      description="Expert in Customer Experience Management, Solution Director CX" >
-      <Image src={speaker6} alt="Jan Lemmens" width={512} height={512} class="" />
-    </SmallTile>
+    headline="Tom Laureys (AmeXio)"
+    description="Expert in digital transformation and content management strategies" >
+    <Image src={speaker2} alt="Tom Laureys" width={512} height={512} class="" />
+  </SmallTile>
+  
 
+    <SmallTile 
+    headline="Jan Lemmens (AmeXio)" 
+    description="Expert in Customer Experience Management, Solution Director CX" >
+    <Image src={speaker6} alt="Jan Lemmens" width={512} height={512} class="" />
+  </SmallTile>
 <!--     <SmallTile 
       headline="Jérôme Fortias (AmeXio)"
       description="Expert in AI-driven innovation, AI program group director" >
       <Image src={speaker5} alt="Jérôme Fortias" width={512} height={512} class="" />
     </SmallTile>-->
 
-    <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
-      <Image loading="lazy" src={slant} alt="" />
-    </div>
   </TilesContainer>
 
   <Customers headline="Gold Sponsors">
