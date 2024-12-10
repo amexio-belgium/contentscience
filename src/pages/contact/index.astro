@@ -1,0 +1,20 @@
+---
+import { useTranslations } from "src/i18n/utils";
+import Base from "@layouts/Base.astro";
+import HeroHeader from "@components/uicomposition/HeroHeader.astro";
+import ContactForm from "@components/uielements/contactForm.astro";
+
+
+
+const t = useTranslations('en', "contact");
+---
+
+<Base
+	page="contact"
+	title="Let’s tackle your content challenges together"
+	description="Reach out to discuss your Content Science challenges and discover how we can help transform your content into impactful solutions.">
+	<HeroHeader headline="Contact us" text="Reach out to discuss your Content Science challenges and discover how we can help transform your content into impactful solutions."/>
+
+	<ContactForm headline="Contact us to discuss your Content Science challenges and find practical solutions for your business needs." />	
+	
+</Base>

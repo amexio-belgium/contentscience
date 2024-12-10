@@ -10,8 +10,8 @@ const hbsptContactForm = {
         document.head.appendChild(script);
     },
     initForm: function (lang) {
-        let formId = "1ca9d580-048a-40d8-9b2f-7f1ccded1d6f";
-
+        let formId = "6c668b7f-75ec-4269-8a4d-a303d1e15a08";
+        
         // @ts-ignore
         if (hbspt) {
             hbspt.forms.create({
