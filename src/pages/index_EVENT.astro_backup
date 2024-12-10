@@ -1,0 +1,107 @@
+---
+import { i18nParams } from '../i18n/consts'
+import { useTranslations } from '../i18n/utils';
+import Base from '@layouts/Base.astro';
+import HeroHeader from '@components/uicomposition/HeroHeader.astro';
+import TilesContainer from '@components/uicomposition/TilesContainer.astro';
+import SmallTile from '@components/uielements/SmallTile.astro';
+import slant from "@assets/images/slantwithimage.png"
+import Image from 'astro/components/Image.astro';
+import TeaserWithImage  from "@components/uicomposition/TeaserWithImage.astro";
+import avepoint from '@assets/logos/avepoint-logo.png';
+import ser from '@assets/logos/SER-logo.png';
+import sanity from '@assets/logos/sanityio-logo.png';
+import algolia from '@assets/logos/algolia-logo.png';
+import powell from '@assets/logos/powell-logo.png';
+import Customers from "@components/uicomposition/Customers.astro"
+import speaker1 from '@assets/images/peter-hinssen-speaker.png';
+import speaker2 from '@assets/images/tom-laureys.png';
+import speaker4 from '@assets/images/karsten-gielis.png';
+import speaker5 from '@assets/images/jerome-fortias1.png';
+import speaker6 from '@assets/images/jan-lemmens.png';
+import eventlocation from '@assets/images/ohl.png';
+import conferencecenter from '@assets/images/content-science-conference.png';
+
+const t = useTranslations('en', 'home');
+---
+<Base title="Content Science Conference 24 - Belgium’s first event dedicated to the revolutionary impact of AI on Content Management" description={t('home.seoDescription')}>
+  <HeroHeader 
+      headline="CONTENT SCIENCE <span style='color:#D9E8F5;'>CONFERENCE</span> <span style='color:#F8803D;'>24</span>"
+      text="The Next Wave of Enterprise Innovation: Where <strong>Content Management</strong> Meets <strong>AI</strong>. <br/>Discover how AI can enhance your content platforms and streamline processes!"
+      homepage>
+  </HeroHeader>
+
+	<TeaserWithImage 
+		headline="Amexio invites you to the Content Science Conference <span class='text-orange'>24</span>"
+		description="Be part of <strong>Belgium’s first event dedicated to the revolutionary impact of AI on Content Management</strong>. At the Content Science Conference 24, you’ll have the opportunity to explore how AI elevates customer experience, optimizes intranets, and boosts employee efficiency in content-driven businesses. Learn from industry experts like <strong>Peter Hinssen (Nexxworks)</strong>, <strong>Karsten Gielis (KBC Bank & Verzekering)</strong> and <strong>Tom Laureys (AmeXio group)</strong>, and discover the latest tools and strategies shaping the future of content management.<br/><br/>Whether you’re seeking actionable insights, connecting with key decision-makers, or exploring cutting-edge advancements, this conference offers an opportunity to explore the evolving world of content and AI.<br/><br/>Oh, and did we mention? It’s free!">
+		<Image src={eventlocation} alt="OHL Stadium Leuven" style="margin-top:30px;"  width={800} class="" />
+    <br/><h2 style="font-weight:bold;" class="font-serif uppercase text-lg text-blue">Time &amp; Place</h2>
+    <span style="font-size:140%">28 NOV 2024 - 13:00-18:00</span><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6"><strong>OHL LEUVEN STADIUM, The King Power At Den Dreef Stadium</strong></a><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6">Kardinaal Mercierlaan 46, 3001 Leuven</a>
+	</TeaserWithImage>
+	
+  <TilesContainer class="mb-0 pb-0" orangeSlant={true}
+    headline="Meet Our Keynote Speakers"
+    description="Our speakers are at the forefront of innovation, bringing unparalleled insights and expertise." >
+    
+    <SmallTile 
+      headline="Peter Hinssen (Nexxworks)"
+      description="Renowned technology thought leader, author, and entrepreneur." >
+      <Image src={speaker1} alt="Peter Hinssen" width={512} height={512} class="" />
+    </SmallTile>
+
+    <SmallTile 
+      headline="Karsten Gielis (KBC Bank & Verzekering)" 
+      description="PhD, Data Scientist" >
+      <Image src={speaker4} alt="Karsten Gielis" width={512} height={512} class="" />
+    </SmallTile>
+
+    
+
+    <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
+      <Image loading="lazy" src={slant} alt="" />
+    </div>
+  </TilesContainer>
+
+  <TilesContainer headline="" description="" orangeSlant={true} class="mt-0 pt-0">
+    <SmallTile 
+    headline="Tom Laureys (AmeXio)"
+    description="Expert in digital transformation and content management strategies" >
+    <Image src={speaker2} alt="Tom Laureys" width={512} height={512} class="" />
+  </SmallTile>
+  
+
+    <SmallTile 
+    headline="Jan Lemmens (AmeXio)" 
+    description="Expert in Customer Experience Management, Solution Director CX" >
+    <Image src={speaker6} alt="Jan Lemmens" width={512} height={512} class="" />
+  </SmallTile>
+<!--     <SmallTile 
+      headline="Jérôme Fortias (AmeXio)"
+      description="Expert in AI-driven innovation, AI program group director" >
+      <Image src={speaker5} alt="Jérôme Fortias" width={512} height={512} class="" />
+    </SmallTile>-->
+
+  </TilesContainer>
+
+  <Customers headline="Gold Sponsors">
+    <a href="https://www.avepoint.com/" target="_blank"><Image src={avepoint} alt="AvePoint Gold Partner Content Science Conference 24" style="margin-top:10px;" class="h-10 w-auto"/></a>
+   <a href="https://www.sergroup.com/" target="_blank"><Image src={ser} alt="SER Gold Partner Content Science Conference 24" style="margin-left:50px;" class="h-14 m w-auto"/></a>
+   <a href="https://www.sanity.io/" target="_blank"><Image src={sanity} alt="Sanity CMS Gold Partner Content Science Conference 24" style="margin-top:2px; margin-left:50px;" class="h-14 w-auto"/></a>
+    <a href="https://powell-software.com" target="_blank"><Image src={powell} alt="Powel Software Gold Partner Content Science Conference 24" style="margin-top:2px; margin-left:50px;" class="h-14 w-auto"/></a>
+
+  </Customers>   
+
+  <Customers headline="Silver Sponsors">
+    <a href="https://www.algolia.com/" target="_blank"><Image src={algolia} alt="Algolia" style="margin-top:2px;" class="h-12 w-auto"/></a>
+  </Customers>   
+
+	<TeaserWithImage 
+		headline="Conference Agenda"
+    ctaText="Grab Your Free Spot" 
+		description="<table><tr><td style='width:20%;'>13:00 - 13:30</td><td>Welcome & (optional) Stadium Tour<br/><br/><span style='color:#F8803D;'>Explore our innovation hub</span><br/>In our Innovation Hub, you will have access to the latest innovations, interactive demos from AmeXio and partners, and the opportunity to engage in interactive discussions about challenges and opportunities.</td></tr><tr><td>13:30 - 13:45</td><td>Setting the Scene by AmeXio (Ruben Thys)</td></tr><tr><td>13:45 - 14:45</td><td><span style='color:#F8803D;'>Keynote by Peter Hinssen (Nexxworks)</span></td></tr><tr><td>14:45 - 15:15</td><td>Pause / Explore our Innovation Hub</td></tr><tr><td>15:15 - 16:15</td><td>Breakout Session 1<br/><span style='color:#F8803D;'>Content Science in Action: How to Leverage AI, Refine Data, and Deliver Value (by Tom Laureys &amp; Jan Lemmens)</span></td></tr><tr><td>16:15 - 16:45</td><td>Pause / Explore our Innovation Hub</td></tr><tr><td>16:45 - 17:15</td><td>Breakout Session 2<br/><span style='color:#F8803D;'>Content Science at KBC: From Information to Wisdom (by Karsten Gielis, KBC)</span></td></tr><tr><td>17:15 - 18:00</td><td>Networking & Food / Explore our Innovation Hub</td></tr></table>">
+   
+    <Image src={conferencecenter} alt="Content Science Conference 24 announcement - 24 november 2024" height={512}  class="" />  
+  </TeaserWithImage>
+  
+</Base>
+

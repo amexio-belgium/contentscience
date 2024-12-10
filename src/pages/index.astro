@@ -8,6 +8,13 @@ import SmallTile from '@components/uielements/SmallTile.astro';
 import slant from "@assets/images/slantwithimage.png"
 import Image from 'astro/components/Image.astro';
 import TeaserWithImage  from "@components/uicomposition/TeaserWithImage.astro";
+import Quote from "@components/uicomposition/Quote.astro"
+import Button from '@components/uielements/Button.astro';
+import Faq from "@components/uicomposition/Faq.astro"
+import FaqQuestion from "@components/uielements/FaqQuestion.astro"
+import Youtube from "@components/uielements/Youtube.astro"
+
+import amexio from '@assets/images/Amexio-group-turning-content-into-value.jpg';
 import avepoint from '@assets/logos/avepoint-logo.png';
 import ser from '@assets/logos/SER-logo.png';
 import sanity from '@assets/logos/sanityio-logo.png';
@@ -22,67 +29,129 @@ import speaker6 from '@assets/images/jan-lemmens.png';
 import eventlocation from '@assets/images/ohl.png';
 import conferencecenter from '@assets/images/content-science-conference.png';
 
+import Painpoint from '@components/graphicelements/painpoint.astro';
+import ContentImage  from "@components/uielements/ContentImage.astro"
+
+import Strategize from '@components/graphicelements/strategize.astro';
+import Design from '@components/graphicelements/design.astro';
+import Realize from '@components/graphicelements/realize.astro';
+import Optimize from '@components/graphicelements/optimize.astro';
+import ProjectOverview from '@components/uicomposition/ProjectOverview.astro'
+
+
 const t = useTranslations('en', 'home');
 ---
-<Base title="Content Science Conference 24 - Belgium’s first event dedicated to the revolutionary impact of AI on Content Management" description={t('home.seoDescription')}>
+<Base title="Content Science - Let's turn your content into real value" description={t('home.seoDescription')}>
   <HeroHeader 
-      headline="CONTENT SCIENCE <span style='color:#D9E8F5;'>CONFERENCE</span> <span style='color:#F8803D;'>24</span>"
-      text="The Next Wave of Enterprise Innovation: Where <strong>Content Management</strong> Meets <strong>AI</strong>. <br/>Discover how AI can enhance your content platforms and streamline processes!"
+      headline="<span style='color:#D9E8F5;'>Let's turn</span> your content <span style='color:#D9E8F5;'>into</span> <span style='color:#F8803D;'>real value</span>"
+      text="Welcome to the era of generative AI (genAI)—a shift where “content” takes the spotlight. Just like data science revolutionized how we work with numbers, <strong><span style='color:#F8803D;'>content science</span> is the next step</strong>, helping businesses transform unstructured data into practical knowledge, streamlined processes, and lasting value."
       homepage>
   </HeroHeader>
 
 	<TeaserWithImage 
-		headline="Amexio invites you to the Content Science Conference <span class='text-orange'>24</span>"
-		description="Be part of <strong>Belgium’s first event dedicated to the revolutionary impact of AI on Content Management</strong>. At the Content Science Conference 24, you’ll have the opportunity to explore how AI elevates customer experience, optimizes intranets, and boosts employee efficiency in content-driven businesses. Learn from industry experts like <strong>Peter Hinssen (Nexxworks)</strong>, <strong>Karsten Gielis (KBC Bank & Verzekering)</strong> and <strong>Tom Laureys (AmeXio group)</strong>, and discover the latest tools and strategies shaping the future of content management.<br/><br/>Whether you’re seeking actionable insights, connecting with key decision-makers, or exploring cutting-edge advancements, this conference offers an opportunity to explore the evolving world of content and AI.<br/><br/>Oh, and did we mention? It’s free!">
-		<Image src={eventlocation} alt="OHL Stadium Leuven" style="margin-top:30px;"  width={800} class="" />
-    <br/><h2 style="font-weight:bold;" class="font-serif uppercase text-lg text-blue">Time &amp; Place</h2>
-    <span style="font-size:140%">28 NOV 2024 - 13:00-18:00</span><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6"><strong>OHL LEUVEN STADIUM, The King Power At Den Dreef Stadium</strong></a><br/><a target="_blank" href="https://maps.app.goo.gl/zB61hjNYmqtURn5V6">Kardinaal Mercierlaan 46, 3001 Leuven</a>
-	</TeaserWithImage>
-	
-  <TilesContainer class="mb-0 pb-0" orangeSlant={true}
-    headline="Meet Our Keynote Speakers"
-    description="Our speakers are at the forefront of innovation, bringing unparalleled insights and expertise." >
-    
-    <SmallTile 
-      headline="Peter Hinssen (Nexxworks)"
-      description="Renowned technology thought leader, author, and entrepreneur." >
-      <Image src={speaker1} alt="Peter Hinssen" width={512} height={512} class="" />
-    </SmallTile>
+    ctaText="Download #CSC24 package" 
+		headline="Reflecting on  Content Science Conference <span class='text-orange'>24</span>"
+		description="On November 28th, the OHL Stadium in Leuven became the stage for Belgium’s first event dedicated to the <strong>groundbreaking impact of AI on content management</strong>. The Content Science Conference 24 brought together industry leaders, innovators, and curious minds to explore how AI is reshaping customer experiences, streamlining intranets, and boosting employee efficiency in content-driven organizations.<br/><br/>With inspiring talks from experts like <strong>Peter Hinssen (Nexxworks)</strong>, <strong>Karsten Gielis (KBC)</strong>, <strong>Jan Lemmens, and Tom Laureys</strong>, attendees gained actionable insights and fresh perspectives on the tools and strategies driving the future of content and AI.<br/><br/>A big thank you to everyone who joined us for this incredible afternoon of learning, networking, and exploring the evolving world of content science. Together, we've taken a step forward in shaping the future of content. See you next time!">
+    <h2 style=" font-weight:bold;" class="mt-10 font-serif uppercase text-lg text-blue">Highlights from #CSC24</h2>
+    <Youtube class="mt-5" videoId="IM7w5URSbSQ" title="Content Science Conference 24 recap"></Youtube>
+    <br/><h3 style="font-weight:bold;" class="font-serif uppercase text-md text-blue">Stay tuned!</h3>
+    <p>In the coming weeks, we'll be sharing some truly insightful materials from the Content Science Conference 2024. Expect expert perspectives, key takeaways, and strategies to inspire and drive your next move into Content Science.</p>
 
-    <SmallTile 
-      headline="Karsten Gielis (KBC Bank & Verzekering)" 
-      description="PhD, Data Scientist" >
-      <Image src={speaker4} alt="Karsten Gielis" width={512} height={512} class="" />
-    </SmallTile>
+  </TeaserWithImage>
 
-    
 
-    <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
-      <Image loading="lazy" src={slant} alt="" />
-    </div>
-  </TilesContainer>
-
-  <TilesContainer headline="" description="" orangeSlant={true} class="mt-0 pt-0">
-    <SmallTile 
-    headline="Tom Laureys (AmeXio)"
-    description="Expert in digital transformation and content management strategies" >
-    <Image src={speaker2} alt="Tom Laureys" width={512} height={512} class="" />
+  <TilesContainer orangeSlant="yes"
+  headline="From <span class='text-white'>stuck in POC</span> to real transformation:<br/>the power of Content Science"
+  description="AI has so much potential, but why do so many projects get stuck in the proof-of-concept phase? That’s where Content Science steps in. It’s not just about tools; it’s about aligning technology, processes, and people to finally make sense of all that unstructured data—think Word documents, PDFs, PowerPoints, webpages and emails—and using it to work smarter and faster. Simply put: if data science was about analyzing numbers, content science is about turning information into wisdom, creating experiences that matter, and driving real transformation. <br/><br/>To introduce content science in your organization, we focus on three key areas: " >
+  <SmallTile 
+    buttonText="Start the conversation"
+    buttonLink="#contact"
+    headline="<span class='text-yellow'>Discover value</span> in AI innovation"
+    description="As the first step in discovering value, we use our <strong>AI Exploration Canvas to uncover opportunities across key departments</strong> like Sales, HR, Marketing, Operations, and Legal. By mapping business needs to AI capabilities—such as classification, retrieval, creation, summarization, automation, and compliance—we build a strong foundation for unlocking generative AI’s potential." >
+    <ContentImage loading="lazy" class='mx-auto rounded-xl overflow-hidden'
+            src='/src/assets/images/discover-value.jpg' 
+            width="796"
+            height="322"
+    />
   </SmallTile>
-  
-
-    <SmallTile 
-    headline="Jan Lemmens (AmeXio)" 
-    description="Expert in Customer Experience Management, Solution Director CX" >
-    <Image src={speaker6} alt="Jan Lemmens" width={512} height={512} class="" />
+  <SmallTile 
+    buttonText="Start preparing content"
+    buttonLink="#contact"
+    headline="<span class='text-yellow'>Prepare Content</span> for impactful AI"
+    description="To harness the power of AI, <strong>your content must be ready</strong>. Content preparation includes dispersion (organizing and sharing), quality (ensuring governance and accuracy), and security (protecting sensitive information). Transforming unstructured content into clear, consistent, and integrated formats is also key. Beyond technology, processes and organizational needs are addressed to build a strong foundation for impactful AI solutions." >
+    <ContentImage loading="lazy" class='mx-auto rounded-xl overflow-hidden'
+    src='/src/assets/images/prepare-content.jpg' 
+    width="796"
+    height="322"
+/>
   </SmallTile>
-<!--     <SmallTile 
-      headline="Jérôme Fortias (AmeXio)"
-      description="Expert in AI-driven innovation, AI program group director" >
-      <Image src={speaker5} alt="Jérôme Fortias" width={512} height={512} class="" />
-    </SmallTile>-->
+  <SmallTile 
+    buttonText="Unlock lasting potential"
+    buttonLink="#contact"
+    headline="<span class='text-yellow'>Maximize Potential</span> with lasting habits"
+    description="“<i>People are incredible creatures of habit</i>”. Unlocking potential starts with understanding that change takes time. It’s not just about new tools or quick fixes—it’s about the value they bring and how they reshape habits. Real transformation means asking the right questions, managing expectations, and knowing that experimenting isn’t the same as production. <strong>Measure progress, adapt continuously, and build sustainable habits</strong> for lasting results.">
+    <ContentImage loading="lazy" class='mx-auto rounded-xl overflow-hidden'
+    src='/src/assets/images/maximize-value.jpg' 
+    width="796"
+    height="322"
+/>
 
-  </TilesContainer>
+  </SmallTile>
+  <div slot="bg-image" class="absolute -z-10 w-[250%] md:w-[1240px] h-[1000px] -right-3/4 sm:-right-full lg:-right-1/3 -bottom-20 md:-top-20 bg-contain bg-no-repeat">
+    <Image loading="lazy" src={slant} alt="" />
+  </div>
+</TilesContainer>
 
+
+<Faq headline="Questions we usually get" class="text-white">
+  <FaqQuestion
+    headline="How do I know if my organization needs Content Science?"
+    headlineTag="h3"> 
+    <p>Many organizations face challenges managing content effectively, from disorganized data and inefficient workflows to security risks and outdated information. Preparing content for AI introduces further complexity, especially when data quality and structure are lacking. Often, these challenges are compounded by fragmented tools and systems that fail to support seamless content management and collaboration.</p>
+    <h4>Key pain points</h4>
+    <ul>
+      <li>Disorganized and hard-to-access content.</li>
+      <li>Fragmented (legacy) tools and systems creating inefficiencies.</li>
+      <li>Time wasted on inefficient workflows.</li>
+      <li>Outdated or inconsistent content quality.</li>
+      <li>Security risks and compliance issues.</li>
+      <li>Siloed teams and misaligned processes.</li>
+    </ul>
+  </FaqQuestion>
+  <FaqQuestion 
+    headline="How do your solutions help organizations get ready for AI?"
+    headlineTag="h3" >
+    <p>We combine <strong>expert knowledge</strong> with <strong>powerful software tools</strong> to organize and clean up your content, making it accurate, secure, and easy to use. Our expertise is both technological—working with platforms from multiple vendors like Microsoft, OpenText, IBM, SER, and Adobe—and organizational, with business analysts who optimize processes and the content lifecycle. In the domain of Customer Experience (CX), we help organizations transform unstructured webpages into structured, usable content. This approach ensures your content is AI-ready and seamlessly integrated across your organization.</p>
+  </FaqQuestion>
+  <FaqQuestion 
+  headline="How many years of experience does your team have in Content Science and related fields?">
+  <p>Our team at Amexio Group brings <strong>over 20 years of expertise</strong> across multiple domains, including ECM (Enterprise Content Management), CXM (Customer Experience Management), CCM (Customer Communication Management), and SCM (Structured Content Management). Over the years, we’ve developed deep knowledge of all forms of content and extensive experience in content migrations. This expertise uniquely positions us to prepare content for the new era of generative AI, ensuring it is optimized, structured, and ready for advanced AI-driven solutions.</p>
+</FaqQuestion>
+  <FaqQuestion 
+    headline="What industries or departments benefit most from Content Science?" >
+    <p>Content Science benefits industries and departments that rely heavily on managing, organizing, and utilizing large volumes of content. Key beneficiaries include sectors like finance, healthcare, manufacturing, retail, and government, where compliance, accuracy, and efficiency are critical. Departments such as Sales, HR, Marketing, Operations, and Legal can leverage Content Science to improve workflows, enhance customer experiences, ensure content quality, and prepare content for AI-driven solutions. By addressing both technological and organizational needs, Content Science delivers value across diverse industries and functions.</p>
+  </FaqQuestion>
+
+</Faq>
+
+
+<TeaserWithImage align="left"
+		headline="Why work with us?"
+		description="At Amexio Group, we take a comprehensive approach to Content Science, ensuring alignment between <strong>people, processes, and tools for maximum impact</strong>. Our mission is to turn your content into value, <strong>no matter its form—whether document-based, web-based, XML-based, or beyond</strong>. <img src='/src/assets/images/amexio-group.gif' style='width:70%'/>  Implementation is just the beginning—we go further to address every step required for lasting success and ROI.<br/><br/>Our approach starts with discovering value, identifying opportunities through tailored AI solutions and strategic analysis to unlock the potential within your organization. We then move to preparing content, focusing on organizing, securing, and ensuring its quality to make it AI-ready. Finally, we focus on maximizing potential, aligning systems, processes, and people to create seamless integration and enable long-term transformation.<br/><br/>By working with you to plan for the future, we make sure your content systems deliver real, AI-powered results.">	
+        
+  </TeaserWithImage>
+
+
+
+<Quote 
+quote="AI is fundamentally transforming how we leverage content—it’s not about what AI can do, but <span class='text-yellow'>what AI can do for you</span>. <br/>Keep in mind: <span class='text-yellow'>content is the food for AI</span>. When AI eats junk, it’s not going to perform. Let us help you bring content science to your organization and unlock AI’s potential."
+name='Ruben Thys'
+jobtitle="Managing Director AmeXio Belgium"
+profileImage='/src/assets/people/ruben-thys.jpeg'
+class="mt-40"
+/>
+
+    <!-- 
   <Customers headline="Gold Sponsors">
     <a href="https://www.avepoint.com/" target="_blank"><Image src={avepoint} alt="AvePoint Gold Partner Content Science Conference 24" style="margin-top:10px;" class="h-10 w-auto"/></a>
    <a href="https://www.sergroup.com/" target="_blank"><Image src={ser} alt="SER Gold Partner Content Science Conference 24" style="margin-left:50px;" class="h-14 m w-auto"/></a>
@@ -101,7 +170,7 @@ const t = useTranslations('en', 'home');
 		description="<table><tr><td style='width:20%;'>13:00 - 13:30</td><td>Welcome & (optional) Stadium Tour<br/><br/><span style='color:#F8803D;'>Explore our innovation hub</span><br/>In our Innovation Hub, you will have access to the latest innovations, interactive demos from AmeXio and partners, and the opportunity to engage in interactive discussions about challenges and opportunities.</td></tr><tr><td>13:30 - 13:45</td><td>Setting the Scene by AmeXio (Ruben Thys)</td></tr><tr><td>13:45 - 14:45</td><td><span style='color:#F8803D;'>Keynote by Peter Hinssen (Nexxworks)</span></td></tr><tr><td>14:45 - 15:15</td><td>Pause / Explore our Innovation Hub</td></tr><tr><td>15:15 - 16:15</td><td>Breakout Session 1<br/><span style='color:#F8803D;'>Content Science in Action: How to Leverage AI, Refine Data, and Deliver Value (by Tom Laureys &amp; Jan Lemmens)</span></td></tr><tr><td>16:15 - 16:45</td><td>Pause / Explore our Innovation Hub</td></tr><tr><td>16:45 - 17:15</td><td>Breakout Session 2<br/><span style='color:#F8803D;'>Content Science at KBC: From Information to Wisdom (by Karsten Gielis, KBC)</span></td></tr><tr><td>17:15 - 18:00</td><td>Networking & Food / Explore our Innovation Hub</td></tr></table>">
    
     <Image src={conferencecenter} alt="Content Science Conference 24 announcement - 24 november 2024" height={512}  class="" />  
-  </TeaserWithImage>
+  </TeaserWithImage>-->
   
 </Base>
 
