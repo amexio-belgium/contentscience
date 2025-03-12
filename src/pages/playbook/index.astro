@@ -1,0 +1,32 @@
+---
+
+const t = useTranslations('en', "contact");
+import playbookimage from '@assets/images/contentscienceplaybook2.jpg';
+
+import { useTranslations } from "src/i18n/utils";
+import Base from "@layouts/Base.astro";
+import HeroHeader from "@components/uicomposition/HeroHeader.astro";
+import PlaybookForm from "@components/uielements/playbookForm.astro";
+import Image from 'astro/components/Image.astro';
+import TeaserWithImage  from "@components/uicomposition/TeaserWithImage.astro";
+---
+
+
+<Base
+	page="playbook"
+	title="Download Content Science Unveiled playbook"
+	description="">
+	<HeroHeader headline="Grab your copy of the <br/>Content Science Unveiled <span style='color:#F8803D;'>playbook</span>" text="In today’s fast-paced digital world, content is no longer just information.<br/>It’s a strategic asset that drives innovation, customer engagement, and business success. The <strong>Content Science Playbook</strong> from AmeXio shows you how to unlock the hidden potential of your content using AI, turning content management into a source of real business value."/>
+
+	<TeaserWithImage 
+		headline=""
+    	ctaText="Grab Your Free Spot" 
+		description="<h2 class='font-serif text-base sm:text-base text-blue uppercase text-balance'>What you’ll learn.</h2><ul style='font-size:80%'><li>How AI is revolutionizing content management and discovery</li><li>A proven 3-step methodology to make your content AI-ready</li><li>How Content Science bridges the gap between data, content, and innovation</li><li>Practical examples for internal processes (ECM) and customer experiences (CXM)</li></ul><h2 class='font-serif text-base sm:text-base text-blue uppercase text-balance'>What you’ll get</h2><ul style='font-size:80%'><li>Insights into the latest AI trends in content management</li><li>Practical strategies to prepare your content for AI-driven processes</li><li>Clear examples of how AI can enhance content-driven processes across departments</li><li>Actionable tips for balancing technology, governance, and user adoption</li></ul>">
+ 
+    <Image src={playbookimage} alt="Content Science Playbook by AmeXio" height={600}  class="" />  
+	
+  </TeaserWithImage>
+
+	<PlaybookForm headline="Download Content Science Unveiled playbook"/>	
+	
+</Base>

@@ -1,0 +1,44 @@
+---
+import { useTranslations } from "src/i18n/utils";
+const { lang } = Astro.params;
+import ContactFormStyling from 'src/styles/contact-form-styling.astro';
+interface Props {
+    headline: string;
+}
+const { headline } = Astro.props;
+
+const t = useTranslations(lang);
+
+import playbookimage from '@assets/images/contentscienceplaybook-header.jpg';
+import Image from 'astro/components/Image.astro';
+---
+<ContactFormStyling/>
+
+<div class="motion-safe:animate-fade-up motion-safe:animate-delay-500 relative mb-40 xl:flex-row py-20 before:-z-10 before:bg-light-blue-50 before:absolute before:-left-[3000px] before:top-0 before:bottom-0 before:right-[1000px] marker:before:h-full before:w-[10000px]">
+    <div class="motion-safe:animate-fade-up motion-safe:animate-delay-700 w-full mb-8 md:mb-16">
+        <div class="mx-auto max-w-[70ch] md:text-[1.25rem]">
+            
+            <div class="mt-8">
+                <h2 class="font-serif text-orange text-3xl sm:text-3xl mb-6" set:html={headline}></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 bg-light-blue-100 rounded-xl p-6 md:p-5 mb-10">
+                    <div class="flex flex-col justify-center text-black text-left">
+                      <h2 class="font-serif text-base sm:text-base text-blue uppercase">Who is this playbook for?</h2>
+                      <p class="prose text-sm sm:text-base font-light max-w-prose">
+                        <ul style='font-size:80%; list-style-type: disc; margin-left:20px;'><li>Digital Transformation Leaders</li><li>CIOs & CTOs</li><li>Marketing & Communication Professionals</li><li>Enterprise Solution Architects</li><li>Innovation & IT Managers</li><li>Content Managers & Editors</li></ul>
+                      </p>
+                    </div>
+                    <div class="mx-auto w-fit shadow-lg overflow-hidden">
+                        <Image src={playbookimage} alt="Content Science Playbook by AmeXio" height={600}  class="" />  
+                    </div>
+                  </div>
+                  
+                  <p>Complete the form below to receive your free copy directly in your inbox.</p><br/>
+
+                <div id="cxm-contact-form" aria-busy="true"></div>
+                <script src="@lib/hubSpotPlaybookForm.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
