@@ -14,6 +14,8 @@ import Faq from "@components/uicomposition/Faq.astro"
 import FaqQuestion from "@components/uielements/FaqQuestion.astro"
 import Youtube from "@components/uielements/Youtube.astro"
 
+
+import playbookimage from '@assets/images/contentscienceplaybook2.jpg';
 import amexio from '@assets/images/Amexio-group-turning-content-into-value.jpg';
 import avepoint from '@assets/logos/avepoint-logo.png';
 import ser from '@assets/logos/SER-logo.png';
@@ -31,7 +33,6 @@ import conferencecenter from '@assets/images/content-science-conference.png';
 
 import Painpoint from '@components/graphicelements/painpoint.astro';
 import ContentImage  from "@components/uielements/ContentImage.astro"
-
 import Strategize from '@components/graphicelements/strategize.astro';
 import Design from '@components/graphicelements/design.astro';
 import Realize from '@components/graphicelements/realize.astro';
@@ -48,14 +49,22 @@ const t = useTranslations('en', 'home');
       homepage>
   </HeroHeader>
 
-	<TeaserWithImage 
+	<TeaserWithImage align="right"
+    ctaText="Grab your copy of the Content Science playbook" 
+		headline="Grab your copy of the <span class='text-orange'>Content Science playbook</span>"
+		description="Want to dive deeper into the future of content and AI? <a href='/playbook'>Download The 'Content Science Unveiled' Playbook</a> and discover how AI, strategy, and data-driven insights can transform your content into real business value. It’s not just about managing content anymore—it’s about mastering it.<br/><br/>Grab your <strong>free copy</strong> now! The future of content isn't just about managing it—it's about mastering the science behind it and turning it into true business value.">
+    
+    <a href="/playbook"><Image src={playbookimage} alt="Content Science Playbook by AmeXio" height={400}  class="" /></a>
+    <Button link='playbook' icon='info' size='sm' class='mt-4'>Download Content Science Unveiled playbook for FREE</Button>
+  </TeaserWithImage>
+
+  <TeaserWithImage align="left"
     ctaText="Download #CSC24 package" 
 		headline="Reflecting on  Content Science Conference <span class='text-orange'>24</span>"
 		description="On November 28th, the OHL Stadium in Leuven became the stage for Belgium’s first event dedicated to the <strong>groundbreaking impact of AI on content management</strong>. The Content Science Conference 24 brought together industry leaders, innovators, and curious minds to explore how AI is reshaping customer experiences, streamlining intranets, and boosting employee efficiency in content-driven organizations.<br/><br/>With inspiring talks from experts like <strong>Peter Hinssen (Nexxworks)</strong>, <strong>Karsten Gielis (KBC)</strong>, <strong>Jan Lemmens, and Tom Laureys</strong>, attendees gained actionable insights and fresh perspectives on the tools and strategies driving the future of content and AI.<br/><br/>A big thank you to everyone who joined us for this incredible afternoon of learning, networking, and exploring the evolving world of content science. Together, we've taken a step forward in shaping the future of content. See you next time!">
+    
     <h2 style=" font-weight:bold;" class="mt-10 font-serif uppercase text-lg text-blue">Highlights from #CSC24</h2>
     <Youtube class="mt-5" videoId="IM7w5URSbSQ" title="Content Science Conference 24 recap"></Youtube>
-    <br/><h3 style="font-weight:bold;" class="font-serif uppercase text-md text-blue">Stay tuned!</h3>
-    <p>In the coming weeks, we'll be sharing some truly insightful materials from the Content Science Conference 2024. Expect expert perspectives, key takeaways, and strategies to inspire and drive your next move into Content Science.</p>
 
   </TeaserWithImage>
 
